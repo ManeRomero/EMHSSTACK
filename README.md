@@ -29,3 +29,5 @@ After that, I began a journey through documentation, and I made this, with these
  
  # NEXT STEPS
 Of course, this project was deprecated, by now. One of the biggest things to do is to create a GET-POST multi image reader, and get the stored objects with image arrays. From Oct to Dec 2018, time when I didnt know about github! That was a darkly time, with some 'index_25.html' or the real 'indexDEF.html', for real. Git and Github are amazing!
+
+EY! By obvious reasons, the .env file has not been pushed. This uses CLOUDINARY API as storage. Of course, feel free to edit, but u'll need some settings to make this properly work.
