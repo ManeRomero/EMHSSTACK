@@ -1,0 +1,88 @@
+{{#if user}}
+
+<div class="marginTop">
+    {{#if lista}}
+    {{#each lista}}
+    <div class="tarjeta">
+        <div class="row">
+            <div class="col-md-2">
+                <h6>REF #{{referencia}}</h6>
+                <small>{{tipoOperacion}}</small>
+            </div>
+
+            <div class="col-md-8">
+                <h2 class="text-left">{{titulo}}</h2>
+            </div>
+
+            <div class="col-md-2">
+                <h2 class="borde text-center">{{precio}} €</h2>
+            </div>
+
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <img src="{{imageURL}}" alt="" class="img-fluid fotico shadow">
+            </div>
+
+            <div class="col-md-10">
+                <small class="p-2">{{descripcion}}</small>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="row extras ml-1">
+
+            <small><i class="fas fa-city" title="Ciudad"></i> {{ciudad}}</small>
+            <small><i class="fas fa-map-marker-alt" title="Zona"></i> {{zona}}</small>
+            <small><i class="far fa-building" title="Tipo de Inmueble"></i> {{tipoPropiedad}}</small>
+            <small><i class="fas fa-ruler-horizontal" title="m2 de Superficie del Inmueble"></i>
+                {{superficie}} m2</small>
+            <small><i class="fas fa-bullseye"
+                    title="Altura del Inmueble. '0' Significa Planta Baja o Inmueble a una sola altura"></i>
+                {{altura}}</small>
+            <small><i class="far fa-calendar-alt" title="Antigüedad del Inmueble"></i> {{antiguedad}}</small>
+            <small><i class="fas fa-signal" title="Estado del Inmueble"></i> {{estado}}</small>
+            <small><i class="fas fa-hotel" title="Número de Plantas"></i> {{numPlantas}}</small>
+            <small><i class="fas fa-bed" title="Número de dormitorios"></i> {{dormitorios}}</small>
+            <small><i class="fas fa-bath" title="Número de cuartos de baño"></i> {{aseos}}</small>
+            <small><i class="fas fa-cloud-sun" title="Orientación de la Propiedad"></i> {{orientacion}}</small>
+            {{#if parcela}} <small><i class="fas fa-campground" title="m2 de Superficie de terreno"></i> {{parcela}}
+                m2</small>{{/if}}
+            {{#if terreno}} <small><i class="fas fa-drafting-compass" title="m2 de Superficie de terraza"></i>
+                {{terraza}}</small> {{/if}}
+            <small><i class="fas fa-street-view" title="Tipo de vistas"></i> {{vistas}}</small>
+            <small><i class="far fa-window-maximize" title="Tipo de ventanas / carpinterías Ext."></i>
+                {{ventanas}}</small>
+            <small><i class="fas fa-door-open" title="Calidad y tipo de Puertas y carp. Interiores"></i> {{puertas}}
+                {{#if tipoPuertas}} - {{tipoPuertas}}</small> {{/if}}
+
+            {{#if ascensor}}
+            <h1>funciona!</h1>
+            {{/if}}
+
+
+            <div class="row mx-auto mt-4 container-fluid">
+                <small class="col-md-9 p-0">Creado: {{creadoEn}}</small>
+                <div class="col-md-3 text-right btnera">
+                <a href="#" class="btn btn-success btn-sm mr-0" title="Edita la REF {{referencia}}"><i class="far fa-edit"></i> Edit</a>
+                <a href="/borraVivienda/{{_id}}" class="btn btn-danger btn-sm mr-0"
+                    title="Elimina la REF {{referencia}}"><i class="far fa-times-circle"></i> Elim</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+
+    {{else}}
+    <h3>No hay viviendas creadas en estos instantes</h3>
+    {{#if user.admin}}
+    <h3>Registra un Inmueble!</h3>
+    <a href="/subeInmueble" class="btn btn-info shadow" title="Registra una propiedad en la base de datos."><i
+            class="fas fa-plus"></i> Registrar</a>
+    {{/if}}
+    {{/if}}
+</div>
+{{/if}}

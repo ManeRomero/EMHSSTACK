@@ -1,0 +1,51 @@
+<header>
+    <nav class="navegacion">
+        <div>
+            <img src="/img/logo.png" class="miniatura">
+            <small class="ml-4 text-white">{{tituloWeb}}</small>
+        </div>
+
+        {{#if user}}
+        <div class="navbar-brand dropdown margenCero d-none d-sm-block">
+
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{#if user.admin}}
+                <small>
+                    <i class="far fa-star text-warning"
+                        title="Esta estrella distingue a los Administradores del Sistema."></i>
+                </small>
+                {{/if}}
+                {{user.name}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/"><i class="fas fa-home"></i> Inicio</a>
+                <a class="dropdown-item" href="/serAdmin"><i class="fas fa-unlock"></i> Convertir a 'Admin'</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/logOut"><i class="fas fa-sign-out-alt"></i> Desconectar</a>
+            </div>
+        </div>
+
+        <form class="form-inline d-none d-sm-block">
+            <input class="form-control" type="search" placeholder="Precio, ciudad, tipo..." aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Buscar</button>
+        </form>
+
+        {{else}}
+
+        <div class="form-inline">
+            {{#if acceso}}
+            <a href="/signUp" class="btn btn-success btn-sm"><i class="far fa-plus-square"></i>
+                Regístrate</a>
+            {{/if}}
+            {{#if registro}}
+            <a href="/signIn" class="btn btn-warning btn-sm"><i class="far fa-address-card"></i>
+                Accede</a>
+            {{/if}}
+
+        </div>
+
+        {{/if}}
+
+    </nav>
+</header>

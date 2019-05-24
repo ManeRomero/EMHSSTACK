@@ -1,0 +1,544 @@
+html {
+    scroll-behavior: smooth;
+    background: rgba(119, 119, 119, 0.1)
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.navegacion{
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(40, 47, 71, 0.7);
+    top: 0;
+    width: 100%;
+    opacity: .3
+}
+
+.navegacion:hover{
+    opacity: 1
+}
+
+.alert{
+    max-height: 200px;
+    position: absolute;
+    bottom: 1vh;
+    right: 11px;
+    font-size: 1.2em
+}
+
+/* PANEL CONTROL */
+
+.botonPropio{
+    height: 150px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    width: 150px;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: .3s
+}
+
+.botonPropio:hover {
+    border: 5px solid;
+    font-size: 150%;
+    text-decoration: none
+}
+
+.botonPropio:hover i {
+    font-size: 100px;
+    margin: auto;
+    opacity: .25
+}
+
+.botonPropio i{
+    font-size: 2em;
+    position: absolute;
+    margin: 4% 4%;
+    overflow: hidden;
+}
+
+#bt01:hover{
+    background-color: rgba(95, 125, 160, 0.5)
+}
+#bt02:hover{
+    background-color: rgba(46, 185, 162, 0.5)
+}
+#bt03:hover{
+    background-color: rgba(0, 248, 62, 0.5)
+}
+#bt04:hover{
+    background-color: rgba(190, 248, 0, 0.5)
+}
+#bt05:hover{
+    background-color: rgba(248, 244, 0, 0.5)
+}
+#bt06:hover{
+    background-color: rgba(248, 161, 0, 0.5)
+}
+#bt07:hover{
+    background-color: rgba(243, 94, 74, 0.5)
+}
+#bt08:hover{
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+/*  */
+
+.fila{
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fila2 {
+    width: 30vw;
+    margin: 4vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.fila2 small{
+    justify-self: flex-start
+}
+
+.proceso {
+    width: 95%;
+    margin: auto;
+    padding: 1%;  
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    background-color: white;
+}
+
+.miniatura{
+    width: 60px;
+    height: auto;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+/* .logoChange:hover::after{
+    content: 'desde 2004'
+} */
+
+.borde {
+    border: 1px solid rgb(194, 194, 194);
+    background-color: white
+}
+
+.parallax1{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: darken ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#p01{
+    background-image: url('../img/foto8.jpg');
+}
+
+#p02{
+    background-image: url('../img/financiación.png');
+    background-size: 120%
+}
+
+#p03{
+    background-image: url('../img/el\ cid\ elda.jpg')    
+}
+
+#p04{
+    background-image: url('../img/Foto\ Jesús\ TRANSPARENCIA.png');
+    background-size: 60%;
+    background-position: left
+}
+
+.parallax1 h1{
+    font-size: 6em;
+    padding: 0 15%;
+    position: sticky;
+    position: -webkit-sticky;
+    cursor: pointer;
+    top: 0;
+    color: rgba(23, 27, 36, 0.70);
+    transition: .3s
+}
+
+.parallax1 h6 {
+    background: black;
+    color: white;
+    padding: 1%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    opacity: .6;
+    cursor: pointer;
+    margin: 5%;
+    margin-bottom: 0;
+    align-self: flex-end;
+    border: 2px solid white
+}
+
+.parallax1 h1:hover{
+    color: rgba(235, 234, 231, 0.959);
+    background-color: rgba(119, 119, 119, 0.198);
+    transition: .3s
+}
+
+.parallax1 h6:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+    border: 2px solid grey;
+    transition: .3s
+}
+
+/* IMPORTANTE!! */
+.btn{
+    margin: 0
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "\0279d   Escoge";
+}
+
+.custom-file-label {
+    cursor: pointer;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.btn {
+    transition: .4s
+}
+
+.bt1 {
+    background-color: rgb(79, 110, 30)
+}
+
+.bt1:hover {
+    background-color: rgb(41, 59, 11);
+    border-color: rgb(13, 26, 4)
+}
+
+.bt2 {
+    background-color: rgb(90, 101, 119);
+}
+
+.bt2:hover {
+    background-color: rgb(36, 40, 47);
+    border-color: black
+}
+
+.bt3 {
+    background-color: rgb(167, 111, 189);
+}
+
+.bt3:hover {
+    background-color: rgb(119, 78, 136);
+    border-color: rgb(55, 29, 66);
+}
+
+.bt4 {
+    background-color: rgb(27, 128, 243)
+}
+
+.bt4:hover {
+    background-color: rgb(77, 108, 175);
+    border-color: rgb(52, 74, 122);
+}
+
+select.form-control>option{
+    margin: 5px
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    z-index: 0;
+    opacity: .5;
+}
+.swiper-slide{
+    z-index: 100;
+}
+.btn {
+    padding: 10px;
+    transform: none;
+    transition: all 0.1s ease-in 0s;
+    outline: rgb(248, 249, 250) dashed 0px;
+    box-sizing: border-box;
+    box-shadow: rgba(255, 255, 255, 0.01) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin: 1px
+}
+
+.btn:hover {
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.margenCero {
+    position: relative;
+    float: left;
+}
+
+.fotico {
+    border: 5px solid white
+}
+.extras > small{
+    padding: 10px
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+.tarjeta {
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 10px;
+    align-items: center;
+    margin: 10px;
+    height: auto;
+}
+
+.calendario {
+    min-height: 100px;
+    border: 1px solid grey
+}
+
+/* .swiper-container{
+    height: 90vh;
+    width: auto
+} 
+
+.img-fluid{
+    max-height: 90vh;
+    max-width: auto;
+}
+
+*/
+
+.swiper-container {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    margin: auto; 
+}
+
+.swiper-slide {
+    max-width: 80%;
+    height: auto;
+    border: 5px solid white;
+    box-shadow : rgba(0, 0, 0, 0.15) 0px 8px 16px 0px
+}
+
+#anterior:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+#posterior:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.downBar {
+    position: fixed;
+    right: 0;
+    bottom: 0vh;
+    left: 0;
+    opacity: 0.8;
+}
+
+.downBar > div > a{
+    padding: 10px;
+    border: 5px solid white;
+}
+.downBar > div > i:hover{
+    transform: scale(.7);
+    transition: .4s;
+}
+
+.LeftDownBar{
+    position: fixed;
+    bottom: 0vh
+}
+
+.LeftDownBar:hover{
+    opacity: 1;
+}
+
+
+/* EFECTO FORM */ 
+
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+  }
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group > input,
+  .form-label-group > label {
+    height: 3.125rem;
+    padding: .75rem;
+  }
+  
+  .form-label-group > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; 
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text; 
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+  }
+
+  .form-control{
+      border: 1px solid rgba(128, 128, 128, 0.295)
+  }
+
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+      transform: scale(.6);
+  }
+
+/* CALENDARIO */
+
+#calendario {
+    border: 4px double black;
+    background-color: #fffafa;
+    text-align: center;
+}
+.btnera{
+    padding: 0
+}
+
+.toggle-off.btn{
+    padding: 100px;
+    background-color: red
+}
+
+#fechaactual i:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.calend {
+    height: 80px;
+    border: 1px solid rgb(189, 189, 189);
+    font-weight: 100
+}
+
+/* 
+
+#diasc {
+border: 1px solid black;
+border-collapse: separate; 
+border-spacing: 4px;
+}
+
+#diasc th, #diasc td { 
+    font: normal 14pt arial;
+    width: 70px; height: 30px;
+}
+
+#diasc th { color: #990099; background-color: #5ecdec }
+#diasc td { color: #492736; background-color: #9bf5ff }
+
+#fechaactual { font: bold 12pt arial; padding: 0.4em }
+#fechaactual i { cursor: pointer; }
+
+#buscafecha { background-color: #663366; color: #9bf5ff; padding: 5px }
+#buscafecha select, #buscafecha input  {
+background-color: #9bf5ff;
+color: #990099; font: bold 10pt arial;
+}
+#buscafecha[type = text]  { text-align: center; }
+#buscafecha[type = button] { cursor: pointer; }
+#anterior {
+float: left; width: 100px; font: bold 12pt arial;
+padding: 0.5em 0.1em; cursor: pointer;
+}
+#posterior {
+float: right; width: 100px; font: bold 12pt arial;
+padding: 0.5em 0.1em; cursor: pointer;
+}
+
+#titulos { font: normal 20pt "arial black"; padding: 0.2em; } */

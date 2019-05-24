@@ -1,0 +1,248 @@
+<div class="marginTop3 p-4 container">
+    <form action="/subidaInmueble" method="POST" enctype="multipart/form-data">
+
+        <div class="text-center mb-4">
+            <p class="text-left mt-4">Da de alta una Propiedad con las características necesarias para el público (no
+                datos
+                'sensibles').</p>
+        </div>
+
+        <h6>información elemental</h6>
+
+        <div class="form-row">
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <input type="text" id="inputReferencia" class="form-control" name="referencia"
+                    placeholder="Referencia Propiedad" title="Referencia actual en Inmovilla" value="{{referencia}}"
+                    autofocus required>
+                <label for="inputReferencia"><i class="far fa-list-alt"></i> Referencia Propiedad</label>
+            </div>
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <input type="text" id="precio" class="form-control" name="precio" placeholder="Precio Propiedad"
+                    title="Precio de venta Público" value="{{precio}}" required>
+                <label for="precio"><i class="far fa-money-bill-alt"></i> Precio Propiedad</label>
+            </div>
+            <div class="col-md-6 col-sm-12 form-label-group">
+                <input type="text" id="inputTitulo" class="form-control" name="titulo"
+                    placeholder="Introduce el título de la Propiedad" title="Indica puntos fuertes, zona..."
+                    value="{{titulo}}" required>
+                <label for="inputTitulo"><i class="far fa-comment"></i> Introduce el título de la Propiedad</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <select class="form-control" name="tipoOperacion" required>
+                    <option value="_" selected>Tipo Operación</option>
+                    <hr>
+                    <option value="Venta">Venta</option>
+                    <option value="Alquiler">Alquiler</option>
+                    <option value="Alquiler Opción Compra / Venta">Alquiler Opción Compra / Venta</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <select class="form-control" name="tipoPropiedad" required>
+                    <option value="_" selected>Tipo de Propiedad</option>
+                    <option value="Piso">Piso</option>
+                    <option value="Chalet / Casa de Campo">Chalet / Casa de Campo</option>
+                    <option value="Bungalow / Casa">Bungalow / Casa</option>
+                    <option value="Local / Garaje">Local / Garaje</option>
+                    <option value="Terreno">Terreno</option>
+                    <option value="Nave Industrial / Otros">Nave Industrial / Otros</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <select class="form-control" name="ciudad" required>
+                    <option value="_" selected>Ciudad</option>
+                    <option value="Elda">Elda</option>
+                    <option value="Petrer">Petrer</option>
+                    <option value="Sax">Sax</option>
+                    <option value="Local / Garaje">Salinas</option>
+                    <option value="Monóvar">Monóvar</option>
+                    <option value="Pinoso">Pinoso</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-12 form-label-group">
+                <input type="text" id="inputZona" class="form-control" name="zona" placeholder="Zona del Inmueble"
+                    title="Zona de la Propiedad. Trata de tener sentido publicitario." value="{{zona}}" required>
+                <label for="inputZona"><i class="fas fa-map-marker-alt"></i> Zona del Inmueble</label>
+            </div>
+
+        </div>
+
+        <div class="form-label-group">
+            <textarea name="descripcion" rows="2" class="form-control mx-auto" placeholder=" Introduce la descripción"
+                title="Indica emplazamiento aproximado, puntos fuertes, características globales e información importante."
+                required>{{descripcion}}</textarea>
+        </div>
+
+        <hr>
+
+        <h6 class="mt-2">características</h6>
+
+        <div class="form-row">
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="0" max="9999" id="inputSuperficie" class="form-control" name="superficie"
+                    title="m2 Construidos (no los metros 'útiles')" placeholder="m2 Superficie" value="{{superficie}}"
+                    required>
+                <label for="inputSuperficie"><i class="fas fa-ruler-horizontal"></i> m2 Superficie</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="1900" max="2019" id="inputAnt" class="form-control" name="antiguedad"
+                    title="Fecha de construcción del inmueble" placeholder="Antigüedad" value="{{antiguedad}}" required>
+                <label for="inputAnt"><i class="far fa-calendar-alt"></i> Antigüedad</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12">
+                <select class="form-control" name="estado" aria-placeholder="Estado" required>
+                    <option value="_" selected>Estado</option>
+                    <option value="Seminuevo" class="btn btn-outline-success">Seminuevo</option>
+                    <option value="Reformado / Óptimo" class="btn btn-outline-success">Reformado / Óptimo</option>
+                    <option value="Normal" class="btn btn-outline-info">Normal</option>
+                    <option value="Para reformar" class="btn btn-outline-danger">Para reformar</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 col-sm-12">
+                <select class="form-control" name="numPlantas" required>
+                    <option value="_" selected>Núm Plantas</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 o más</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="1" max="10" id="inputDormi" class="form-control" name="dormitorios"
+                    title="Núm. dormitorios. Se ignoran si dobles o simples (sólo el total)." placeholder="Dormitorios"
+                    value="{{dormitorios}}" required>
+                <label for="inputDormi"><i class="fas fa-bed"></i> Dormitorios</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="1" max="10" id="inputAseos" class="form-control" name="aseos"
+                    title="Número total de aseos o cuartos de baño" placeholder="Baños" value="{{aseos}}" required>
+                <label for="inputAseos"><i class="fas fa-bath"></i> Baños</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="0" max="20" id="inputAltura" class="form-control" name="altura"
+                    title="En qué planta está la vivienda" placeholder="Altura" value="{{altura}}" required>
+                <label for="inputAltura"><i class="fas fa-bullseye"></i> Altura</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="text" id="inputOrientacion" class="form-control" name="orientacion"
+                    title="Dato de hacia dónde dan las principales estancias de la propiedad." placeholder="Orientación"
+                    value="{{orientacion}}" required>
+                <label for="inputOrientacion"><i class="fas fa-cloud-sun"></i> Orientación</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="0" id="inputParcela" class="form-control" name="parcela"
+                    title="m2 de terreno en la propiedad" placeholder="m2 Parcela" value="{{parcela}}">
+                <label for="inputParcela"><i class="fas fa-campground"></i> m2 Parcela</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="number" min="0" id="inputTerraza" class="form-control" name="terraza"
+                    title="m2 de terraza en la propiedad" placeholder="m2 Terraza" value="{{terraza}}">
+                <label for="inputTerraza"><i class="fas fa-drafting-compass"></i> m2 Terraza</label>
+            </div>
+
+            <div class="col-md-2 col-sm-12">
+                <select class="form-control" name="vistas" required>
+                    <option value="_" selected>Vistas Inmueble</option>
+                    <option value="Despejadas" class="btn btn-outline-success">Despejadas</option>
+                    <option value="Parcialmente despejadas" class="btn btn-outline-info">Parcialmente despejadas</option>
+                    <option value="No despejadas" class="btn btn-outline-danger">No despejadas</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 col-sm-12">
+                <select class="form-control" name="suelo" required>
+                    <option value="_" selected>Tipo de Suelo</option>
+                    <option value="Cerámico / Gres">Cerámico / Gres</option>
+                    <option value="Tarima / Laminado">Tarima / Laminado</option>
+                    <option value="Terrazo / Mármol">Terrazo / Mármol</option>
+                    <option value="Fratasado">Fratasado</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-3 col-sm-12">
+                <select class="form-control" name="ventanas" required>
+                    <option value="_" selected>Ventanas / Carpinterías Ext.</option>
+                    <option value="Climalit PVC">Climalit PVC</option>
+                    <option value="Climalit Aluminio">Climalit Aluminio</option>
+                    <option value="Aluminio">Aluminio</option>
+                    <option value="Madera">Madera</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <select class="form-control" name="puertas" required>
+                    <option value="_" selected>Puertas / Carpinterías Int.</option>
+                    <option value="Renovadas" class="btn btn-outline-success">Renovadas</option>
+                    <option value="Normal" class="btn btn-outline-info">Normal</option>
+                    <option value="De origen" class="btn btn-outline-danger">De origen</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 col-sm-12 form-label-group">
+                <input type="text" id="inputPuertas" class="form-control" name="tipoPuertas"
+                    title="Indica el tipo de material con que se hacen puertas y carp. Interiores"
+                    placeholder="Tipo de Puertas" value="{{tipoPuertas}}">
+                <label for="inputPuertas"><i class="fas fa-door-open"></i> Tipo de Puertas</label>
+            </div>
+
+            <div class="col-md-4 col-sm-12 form-label-group">
+                <input type="text" id="inputOtros" class="form-control" name="otros"
+                    title="Otras características que puedan ser de interés" placeholder="Otros datos" value="{{otros}}">
+                <label for="inputOtros"><i class="fas fa-feather-alt"></i> Otros datos</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <h6 class="mt-2">extras</h6>
+
+        <div class="form-row">
+
+            <div>
+                <!-- Material unchecked -->
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="inputAscensor" name="ascensor">
+                    <label class="form-check-label" for="inputAscensor" aria-valuetext="Tiene"> Ascensor</label>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="input-group mt-4">
+            <div class="custom-file">
+                <input type="file" name="fotoVivienda" class="custom-file-input" id="inputGroupFile01" required multiple>
+                <label for="inputGroupFile01" class="custom-file-label">Sube las fotografías</label>
+            </div>
+        </div>
+
+        <div class="form-row mt-4 p-4 float-right">
+            <a href="/panelControl" class="btn btn-danger btn-sm float-right"><i class="far fa-times-circle"></i>
+                Cancelar</a>
+            <button class="btn btn-success btn-sm float-right " type="submit"><i class="fas fa-cloud-upload-alt"></i>
+                Registra el Inmueble</button>
+        </div>
+    </form>
+    {{#if errorInsercion}}
+    <h6 class="text-danger mt-4">{{errorInsercion}}</h6>
+    {{/if}}
+</div>

@@ -1,0 +1,39 @@
+<div class="marginTop">
+    {{#if user.admin}}
+    <div class="card mt-4 col-md-6 mx-auto">
+        <div class="card-header">
+            <h3 class="card-title">Admin > Cuenta Standard</h3>
+            <h1></h1>
+        </div>
+        <div class="card-body">
+            <form action="/serNoAdmin/{{user.id}}?_method=PUT" method="POST">
+
+                <div class="form-group">
+                    <button class="btn btn-outline-danger btn-sm float-right">Dejar de ser Admin!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+
+    <div class="card mt-4 col-md-6 mx-auto">
+        <div class="card-header">
+            <h1></h1>
+            <small>Introduce la contraseña adecuada para desbloquear las funciones 'Admin'</small>
+        </div>
+        <div class="card-body">
+            <form action="/serAdmin/{{user.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input type="password" name="passAdmin" class="form-control" placeholder="Introduce Contraseña">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-success btn-sm float-right">Conviérte en Admin!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{/if}}
+</div>

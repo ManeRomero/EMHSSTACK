@@ -1,0 +1,54 @@
+<div class="fila">
+    {{#if entrada}}
+    <div class="fila2">
+        <small>MÓDULO INMUEBLE</small>
+        <a href="/verInmuebles" class="botonPropio" title="Consulta todas las propiedades en nuestra base de datos."
+            id="bt01"><i class="fas fa-home"></i> Ver
+            Inmuebles</a>
+
+        <a href="/listarInmuebles" class="botonPropio" title="Consulta todas las propiedades en nuestra base de datos."
+            id="bt02"><i class="fas fa-edit"></i> Lista de Inmuebles</a>
+
+        {{#if user.admin}}
+        <a href="/subeInmueble" class="botonPropio" title="Registra una propiedad en la base de datos." id="bt03"><i
+                class="fas fa-plus"></i> Sube un Inmueble</a>
+        {{/if}}
+    </div>
+    <div class="fila2">
+        <small>MÓDULO PROCESOS Y VISITAS</small>
+        <a href="/listaProcesos" class="botonPropio" title="Consulta la lista de procesos y tareas activas."
+            id="bt04"><i class="fas fa-tasks"></i> Lista de Procesos</a>
+        {{#if user.admin}}
+        <a href="/crearProceso" class="botonPropio" title="Crea un proceso y añade tus tareas." id="bt05"><i
+                class="far fa-calendar-plus"></i> Crear Procesos</a>
+        {{/if}}
+
+        <a href="/registraVisita" class="botonPropio" title="Deja constancia de la fecha y hora de tu próxima visita."
+            id="bt06"><i class="fas fa-briefcase"></i> Registrar
+            visita</a>
+        <a href="/calendario" class="botonPropio" title="Consulta la Agenda de Visitas." id="bt07"><i
+                class="far fa-calendar-alt"></i> Calendario de visitas</a>
+    </div>
+    {{#if user.admin}}
+    <div class="fila2">
+        <small>MÓDULO EMPLEADOS</small>
+        <a href="/verRendimiento" class="botonPropio"
+            title="Observa resultados acerca de visitas, horas de entrada y salida, y operaciones exitosas."
+            id="bt08"><i class="far fa-eye"></i> Consulta Rendimiento</a>
+        {{/if}}
+
+        {{else}}
+
+        <div class="fila2">
+            <p>Para dejar constancia de tu entrada al Sistema, haz click en el botón inferior. Los tiempos de sesión
+                quedan
+                almacenados en la Base de Datos.</p>
+
+            <a href="/fichajeEntrada" class="btn btn-block shadow borde bt2 text-white mx-auto botonRedondo"
+                title="Click aquí para dejar constancia de tu entrada y salida del sistema."><i
+                    class="far fa-clock"></i>
+                entrada / salida</a>
+        </div>
+        {{/if}}
+    </div>
+</div>

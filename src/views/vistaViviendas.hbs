@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    {{#if lista}}
+    <div class="row">
+        {{#each lista}}
+        <div class="col-md-4 mt-2"
+            title="{{titulo}} &#10 {{puntito precio}} &#10 {{tipoOperacion}} &#10 Referencia {{referencia}} &#10 {{ciudad}} &#10 {{zona}}">
+            <div class="borde p-2 shadow">
+                <h6 class="p-1 text-truncate" title="{{titulo}}">{{titulo}}</h6>
+                <small class="float-right">REF# {{referencia}}</small>
+                <small>{{tipoOperacion}}</small>
+                <h3 class="text-right borde">{{puntito precio}}</h3>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <img src="{{imageURL}}" alt="" class="swiper-slide">
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <hr>
+
+                <div class="d-flex flex-row">
+                    <div class="col-3">
+
+                    </div>
+
+                    <button class="btn btn-success btn-sm text-truncate p-2 col-3 justify-content-around"><i
+                            class="far fa-comment"></i> chat</button>
+                    <button class="btn btn-info btn-sm col-3 text-truncate ">+ info </button>
+                    <button class="btn btn-warning btn-sm text-truncate p-2 col-3"><i class="far fa-money-bill-alt"></i>
+                        reserva</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    {{else}}
+
+    <h3 class="mx-auto marginTop">No hay viviendas creadas en estos instantes</h3>
+    {{#if user.admin}}
+    <h3>Registra un Inmueble!</h3>
+    <a href="/subeInmueble" class="btn btn-info shadow" title="Registra una propiedad en la base de datos."><i
+            class="fas fa-plus"></i> Registrar</a>
+    {{/if}}
+    {{/if}}
+</div>

@@ -1,0 +1,36 @@
+<div class="row mt-2">
+    <div class="card proceso">
+        <div class="card-header">
+            <a href="/listaProcesos" class="btn btn-outline-dark float-right"><i class="fas fa-angle-left"></i>
+                Volver</a>
+            <h3 class="card-title">
+                Proceso de la REF #{{proceso.referencia}}
+            </h3>
+            <small>Iniciado por {{proceso.creadoPor}}</small>
+            <small>En fecha {{proceso.creadoEn}}</small>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                {{#each consulta}}
+                <div class="card col-md-4">
+                    <div class="card-header row">
+                        <h4 class="card-title d-flex justify-content-between align-items-center text-right">
+                            <strong>{{ titulo }} </strong></h4>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="text-left" title="Explicación de la tarea"> {{ anotaciones }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small>Tarea creada por: {{creadoPor}}</small> <br>
+                        <small>{{creadoEn}}</small>
+                    </div>
+                    <a href="/borrarTarea/{{_id}}" class="btn btn-danger mr-0 col-4"
+                        title="Elimina la REF {{referencia}}"><i class="far fa-times-circle"></i> Eliminar Tarea</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

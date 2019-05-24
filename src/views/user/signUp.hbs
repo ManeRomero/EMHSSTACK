@@ -1,0 +1,80 @@
+{{!-- <div class="marginTop mx-auto col-md-4">
+  <div>
+    <div class="card text-center p-4">
+
+      <img class="mx-auto d-block logo p-4" src="/img/logo.png" alt="Casa Fácil, tu inmobiliaria desde 2004">
+
+      <div class="card-body">
+        <form action="/signUp" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Nombre" value="{{name}}">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Dirección e-mail" value="{{email}}">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña"
+              value="{{confirm_password}}">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Registrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+
+
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<div class="p-4">
+  <form action="/signUp" method="POST" class="form-signin shadow marginTop2">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Casa Fácil app</h1>
+      <img class="mx-auto d-block logo" src="/img/logo.png" alt="Casa Fácil, tu inmobiliaria desde 2004">
+
+      <p class="mt-4">Accede a las herramientas que te ayudarán a mejorar en tu trabajo</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" name="name" id="inputName" class="form-control" placeholder="¿Cómo te llamas?" value="{{name}}" required autofocus >
+      <label for="inputName">¿Cómo te llamas?</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="email" id="inputMail" class="form-control" name="email" placeholder="Dirección e-mail"
+        value="{{email}}" autofocus required>
+      <label for="inputEmail"><i class="far fa-envelope"></i> Dirección E-mail</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Contraseña"
+        value="{{password}}">
+      <label for="inputPassword"><i class="fas fa-key"></i> Contraseña</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassword2" class="form-control" name="conf_password" placeholder="Confirma la Contraseña"
+        value="{{conf_password}}">
+      <label for="inputPassword2"><i class="fas fa-key"></i>Confirma la Contraseña</label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Regístrame</button>
+  </form>
+</div>

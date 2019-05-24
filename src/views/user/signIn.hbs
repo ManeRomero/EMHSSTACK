@@ -1,0 +1,42 @@
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<div class="p-4">
+  <form action="/signIn" method="POST" class="form-signin shadow marginTop2">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Casa Fácil app</h1>
+      <img class="mx-auto d-block logo" src="/img/logo.png" alt="Casa Fácil, tu inmobiliaria desde 2004">
+
+      <p class="mt-4">Accede a las herramientas que te ayudarán a mejorar en tu trabajo</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="email" id="inputMail" class="form-control" name="email" placeholder="Dirección e-mail"
+        value="{{email}}" autofocus required>
+      <label for="inputEmail"><i class="far fa-envelope"></i> Dirección E-mail</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassord" class="form-control" name="password" placeholder="Contraseña"
+        value="{{password}}">
+      <label for="inputPassword"><i class="fas fa-key"></i> Contraseña</label>
+    </div>
+
+    <div class="checkbox mb-3 float-right text-success">
+      <label>
+        <input type="checkbox" value=""> Recuérdame
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Accede</button>
+  </form>
+</div>

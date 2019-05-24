@@ -1,0 +1,31 @@
+<footer class="container-fluid font-small downBar">
+
+  {{#if user}}
+
+  {{#if seccion}}
+  <div class="float-left d-flex">
+
+      <a href="/panelControl" class="btn btn-primary shadow"
+        title="Consulta todas las propiedades en nuestra base de datos."><i class="fab fa-cpanel"></i></a>
+
+      <a href="/verInmuebles" class="btn btn-success shadow"
+        title="Consulta todas las propiedades en nuestra base de datos."><i class="fas fa-home"></i></a>
+
+      {{#if user.admin}}
+      <a href="/subeInmueble" class="btn btn-info shadow" title="Registra una propiedad en la base de datos."><i
+          class="fas fa-plus"></i></a>
+      <a href="/listarInmuebles" class="btn bt4 text-white shadow"
+        title="Modifica o elimina Propiedades registradas en el Programa"><i class="fas fa-edit"></i></a>
+      {{/if}}
+
+
+  </div>
+  {{else}}
+  <div class="footer-copyright text-center py-3 float-right bg-dark p-2">© 2019 Copyright:
+    <strong><a href="https://e-casafacil.com"> Casa Fácil Productos Tecnológicos</a></strong>
+  </div>
+  {{/if}}
+
+
+  {{/if}}
+</footer>

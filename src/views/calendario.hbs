@@ -1,0 +1,120 @@
+<div class="container marginTop">
+    <div id="fechaactual" class="float-right"></div>
+    <hr>
+
+    <div id="calendario marginTop">
+        <div class="row">
+            <div class="col-2 float-left">
+                <i class="fas fa-angle-double-left float-left"></i>
+                <a href="#" onclick="mesantes()" id="anterior"></a>
+            </div>
+            <div class="col-8">
+                <h2 id="titulos" class="text-center"></h2>
+            </div>
+            <div class="col-2 float-right">
+                <i class="fas fa-angle-double-right float-right"></i>
+                <a href="#" onclick="mesdespues()" id="posterior" class="float-right"></a>
+            </div>
+        </div>
+
+        <table id="diasc" class="container">
+            <tr id="fila0">
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+            </tr>
+            <tr id="fila1">
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+                <td class="text-center" onclick="queDiaEs(this)"></td>
+            </tr>
+            <tr id="fila2">
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+            <tr id="fila3">
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+            <tr id="fila4">
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+            <tr id="fila5">
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+            <tr id="fila6">
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+                <td class="text-center"></td>
+            </tr>
+        </table>
+
+        <div class="row shadow mt-4">
+            <div class="col-6">
+                <a href="#" onclick="actualizar()" class="btn btn-outline-info"><i class="far fa-calendar-alt"></i> Ir a
+                    fecha actual</a>
+            </div>
+
+            <div class="col-6 border border-info d-flex">
+                <div id="buscafecha" class="float-right mt-2 pd-2 mx-auto">
+                    <form action="#" name="buscar">
+                        <label for="">Buscar ... MES</label>
+                        <select name="buscames">
+                            <option value="0">Enero</option>
+                            <option value="1">Febrero</option>
+                            <option value="2">Marzo</option>
+                            <option value="3">Abril</option>
+                            <option value="4">Mayo</option>
+                            <option value="5">Junio</option>
+                            <option value="6">Julio</option>
+                            <option value="7">Agosto</option>
+                            <option value="8">Septiembre</option>
+                            <option value="9">Octubre</option>
+                            <option value="10">Noviembre</option>
+                            <option value="11">Diciembre</option>
+                        </select>
+                        <label for="">... AÑO ...</label>
+                        <input type="text" name="buscaanno" maxlength="4" size="4" />
+                        <i class="fas fa-search"></i><input type="button" value="BUSCAR" onclick="mifecha()"
+                            class="btn btn-outline-info" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

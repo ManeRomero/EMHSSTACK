@@ -1,0 +1,62 @@
+
+
+
+<div class="fila">
+{{#each procesos}}
+<div class="proceso">
+  <div>
+    <h6 title="Referencia {{referencia}} en Inmovilla">Ref #{{ referencia }} </h6>
+    <p class="text-left" title="Dirección del Inmueble"><i class="far fa-compass"></i> {{ direccion }}</p>
+    <p class="text-left" title="Precio Final de Venta"><i class="fas fa-money-bill-wave"></i> {{ precioFinal }}</p>
+    <p class="text-left" title="Nombre del Cliente"><i class="far fa-user"></i> {{ nombreCliente }}</p>
+    <p class="text-left" title="Número de Teléfono del Cliente"><i class="fas fa-phone-volume"></i> {{
+          telefonoCliente }}</p>
+  </div>
+
+  <div>
+    <h3 class="card-title">Tareas</h3>
+    <a href="/listaProcesos/{{_id}}/tareas" class="btn btn-outline-info btn-sm ml-3" id="verTareas">
+      <i class="fas fa-briefcase"></i> Ver tareas
+    </a>
+    <button class="btn btn-outline-success btn-sm ml-3" id="crearTareas">
+      <i class="fa fa-comment"></i> Crear tarea
+    </button>
+
+    <form method="POST" class="mt-4 mb-4 shadow p-4 card" action="/procesos/{{_id}}/nuevaTarea">
+      <div class="form-group col-md-4 ">
+        <input type="text" name="titulo" placeholder="Título tarea" class="form-control" autofocus>
+      </div>
+
+      <div class="form-group col-md-8 ">
+        <textarea name="anotaciones" placeholder="Anotaciones tarea" class="form-control" rows="2"></textarea>
+      </div>
+
+      <div class="form-group mb-12">
+        <button type="submit" class="btn btn-outline-success btn-sm float-right"><i class="fa fa-plus"></i>
+          Guardar tarea</button>
+      </div>
+    </form>
+  </div>
+    <small class="float-right">Proceso creado por {{creadoPor}}</small> <br>
+    <small class="float-right">{{creadoEn}}</small>
+</div>
+{{else}}
+</div>
+
+
+<div class="card mx-auto col-md-6 mt-4">
+  <div class="card-body">
+    {{#if user.admin}}
+    <div>
+      <p class="lead">Todavía no tienes procesos creados por ti, {{miembro}}</p>
+      <a href="/crearProceso" class="btn btn-success btn-block">Crea uno!</a>
+    </div>
+    {{else}}
+    <p>No existen procesos en los que participes.</p>
+    <p class="lead">Lo sentimos {{miembro}}, sólo usuarios Admin pueden crear Procesos</p>
+
+    {{/if}}
+
+    {{/each}}
+  </div>
+</div>
